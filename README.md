@@ -6,7 +6,7 @@
 
 ## .editorconfig
 
-````config
+```config
 [*.cs]
 
 indent_style = space
