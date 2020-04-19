@@ -34,7 +34,7 @@ Tools: Options:
 
 - [ ] Enable Just My Code
 - [x] Enable .NET framework source stepping
-- [x] Debugging, Symbols: enable symbol file (.pdb) locations 
+- [x] Debugging, Symbols: enable symbol file (.pdb) locations. I set the path to c:\temp\symbols\
 
 Details: <https://devblogs.microsoft.com/devops/understanding-symbol-files-and-visual-studios-symbol-settings/>
 
@@ -49,7 +49,7 @@ There are other tools which are free and might help on your daily work. Check ou
 
 ## Settings
 
-see chapter .editorconfig for setting all the configuration:
+See chapter .editorconfig for setting all the configuration:
 
 - to avoid git issues, make sure all team members agree on the same tabs/spaces/indentation settings
 - reduce merge conflicts by [x] Place 'System' directories first when sorting usings
@@ -64,11 +64,11 @@ An extionsion to cleanup and simplify our C#. I really like this option, which i
 
 ### Roslynator
 
-A collection of 500+ analyzers, refactorings and fixes for C#
+A collection of 500+ analyzers, refactorings and fixes for C#.
 
 ### SonarLint
 
-Detect Code Quality and Security issues on the fly
+Detect Code Quality and Security issues on the fly.
 
 ### UnitTest Boilerplate Generator
 
