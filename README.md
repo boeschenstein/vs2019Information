@@ -12,10 +12,19 @@ Classic .NET: <https://referencesource.microsoft.com/>
 
 ## Stepping into source code
 
+Be aware of all security and performance issues!
+
 Tools: Options:
 
+[] Enable Just My Code
 [x] Enable .NET framework source stepping
 [x] Debugging, Symbols: enable symbol file (.pdb) locations 
+
+Details: <https://devblogs.microsoft.com/devops/understanding-symbol-files-and-visual-studios-symbol-settings/>
+
+## Performance
+
+Tools: Options: Disable all XAML options, if you don't need it
 
 ## ReSharper
 
