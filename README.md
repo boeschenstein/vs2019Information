@@ -56,13 +56,21 @@ See chapter .editorconfig for setting all the configuration:
 
 ## Visual Studio Extensions (ReSharper alternatives)
 
-I currently have all the following extensions installed and I cannot see any performance issues.
+Currently, I have all the following extensions installed and I cannot see any performance issues.
+
+### Why us tools
+
+I like this option for several reasons:
+
+- Automatically clean up your code, to avoid unused code (sort usings to avoid merge conflicts, remove unused usings)
+- Format your code: this avoids merge conflicts. It is especially important, when you work in a team.
+- Check the VS Code tools as well: <https://github.com/boeschenstein/vscode1_information>
 
 ### CodeMaid
 
-An extionsion to cleanup and simplify our C#. I really like this option, which is not enabled by default: "Automatically run cleanup on save file".
+An extension to cleanup and simplify our C#. *Format on save* is not enabled by default: Please enable this option: "Automatically run cleanup on save file".
 
-### Roslynator
+### Roslynator 2019
 
 A collection of 500+ analyzers, refactorings and fixes for C#.
 
@@ -72,4 +80,4 @@ Detect Code Quality and Security issues on the fly.
 
 ### UnitTest Boilerplate Generator
 
-Generates a unit test boilerplate from a given C# class, setting up mocks for all dependencies.
+Generates a unit test boilerplate from a given C# class, setting up mocks for all dependencies. This tool can save you a lot of time crafting Unit tests. It supports all common frameworks. (XUnit, Moq, ...)
