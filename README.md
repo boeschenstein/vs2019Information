@@ -85,13 +85,13 @@ Generates a unit test boilerplate from a given C# class, setting up mocks for al
 ### Visual Studio Team (Mads Kristensen)
 
 - https://github.com/madskristensen/BasicEssentials
-    Add New File
-    Editor Enhancements
-    EditorConfig Language Service
-    File Icons
-    Insert GUID
-    Learn the Shortcut
-    Markdown Editor
+    - Add New File
+    - Editor Enhancements
+    - EditorConfig Language Service
+    - File Icons
+    - Insert GUID
+    - Learn the Shortcut
+    - Markdown Editor
 
 - https://github.com/madskristensen/WebEssentials2019
 
