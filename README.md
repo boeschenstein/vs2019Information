@@ -81,3 +81,17 @@ Detect Code Quality and Security issues on the fly.
 ### UnitTest Boilerplate Generator
 
 Generates a unit test boilerplate from a given C# class, setting up mocks for all dependencies. This tool can save you a lot of time crafting Unit tests. It supports all common frameworks. (XUnit, Moq, ...)
+
+### Visual Studio Team (Mads Kristensen)
+
+- https://github.com/madskristensen/BasicEssentials
+    Add New File
+    Editor Enhancements
+    EditorConfig Language Service
+    File Icons
+    Insert GUID
+    Learn the Shortcut
+    Markdown Editor
+
+- https://github.com/madskristensen/WebEssentials2019
+
