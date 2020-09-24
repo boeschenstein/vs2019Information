@@ -95,3 +95,34 @@ Generates a unit test boilerplate from a given C# class, setting up mocks for al
 
 - https://github.com/madskristensen/WebEssentials2019
 
+## Solution Cleanup Script
+
+```powershell
+# to run this: 
+# 1) close visual Studio first
+# 2) right click this file, run in PowerShell
+
+$file1ToCheck = ".\MyVeryCoolSolution.sln"
+"Current directory: " + (Get-Item -Path ".\").FullName
+if ((Test-Path $file1ToCheck -PathType leaf))
+{
+    "Solution file found."
+} else {
+    throw "Solution file not found in current directory"
+}
+
+# delete subfolders
+
+'========================== BEFORE ========================== '
+
+Get-ChildItem .\ -include packages,bin,obj,bld,Backup,_UpgradeReport_Files,Debug,Release,ipch,help,.vs -Recurse 
+
+'========================== DELETING NOW ==================== '
+
+Get-ChildItem .\ -include packages,bin,obj,bld,Backup,_UpgradeReport_Files,Debug,Release,ipch,help,.vs -Recurse | foreach ($_) { remove-item $_.fullname -Force -Recurse }
+
+'========================== AFTER =========================== '
+
+Get-ChildItem .\ -include packages,bin,obj,bld,Backup,_UpgradeReport_Files,Debug,Release,ipch,help,.vs -Recurse 
+
+```
