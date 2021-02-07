@@ -97,11 +97,18 @@ Generates a unit test boilerplate from a given C# class, setting up mocks for al
 
 ### Code Coverage (TODO)
 
+https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-code-coverage?tabs=windows
+
 TODO: evaluate free tools:
 
 - https://dotnetfoundation.org/projects/coverlet
 - https://github.com/OpenCover/opencover
 - https://doc.froglogic.com/squish-coco/latest/coveragescanner.html
+- https://github.com/SteveGilham/altcover
+
+Reporting
+
+- https://github.com/danielpalme/ReportGenerator
 
 ## Solution Cleanup Script
 
