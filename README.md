@@ -95,6 +95,14 @@ Generates a unit test boilerplate from a given C# class, setting up mocks for al
 
 - https://github.com/madskristensen/WebEssentials2019
 
+### Code Coverage (TODO)
+
+TODO: evaluate free tools:
+
+- https://dotnetfoundation.org/projects/coverlet
+- https://github.com/OpenCover/opencover
+- https://doc.froglogic.com/squish-coco/latest/coveragescanner.html
+
 ## Solution Cleanup Script
 
 ```powershell
