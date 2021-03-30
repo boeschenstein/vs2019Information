@@ -40,7 +40,8 @@ Details: <https://devblogs.microsoft.com/devops/understanding-symbol-files-and-v
 
 ## Performance
 
-Tools: Options: Disable all XAML options, if you don't need it
+- Tools: Options: Disable all XAML options, if you don't need it
+- Text Editor: All Languages: Code Lense: disable it (also helps to reduce distraction, but unittest status might be helpful)
 
 ## ReSharper
 
