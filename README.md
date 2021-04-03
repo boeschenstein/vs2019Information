@@ -109,7 +109,12 @@ TODO: evaluate free tools:
 
 Reporting
 
+- https://marketplace.visualstudio.com/items?itemName=MadsKristensen.FileDiffer
 - https://github.com/danielpalme/ReportGenerator
+
+### Comparing Files
+
+- https://www.meziantou.net/comparing-files-using-visual-studio.htm
 
 ## Solution Cleanup Script
 
