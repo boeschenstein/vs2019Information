@@ -116,7 +116,17 @@ Reporting
 
 - https://www.meziantou.net/comparing-files-using-visual-studio.htm
 
-## Solution Cleanup Script
+## Solution Cleanup
+
+### Reset all changes
+
+>This cannot be undone!
+
+This resets all changese in the source folder to the current branch.
+
+'git clean -fdx'
+
+### Solution Cleanup Script
 
 ```powershell
 # to run this: 
