@@ -43,6 +43,12 @@ Details: <https://devblogs.microsoft.com/devops/understanding-symbol-files-and-v
 - Tools: Options: Disable all XAML options, if you don't need it
 - Text Editor: All Languages: Code Lense: disable it (also helps to reduce distraction, but unittest status might be helpful)
 
+## Force update
+
+```ps
+Start-Process -Wait -FilePath  "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe" -ArgumentList "update --passive --norestart --installpath ""C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise"""
+```
+
 ## ReSharper
 
 ReSharper is very useful and I recommend it. But there are some downsides like cost and impacts on performance (especially on solution load time).
