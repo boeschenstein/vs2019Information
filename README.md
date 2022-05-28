@@ -77,7 +77,7 @@ I like this option for several reasons:
 
 An extension to cleanup and simplify our C#. *Format on save* is not enabled by default: Please enable this option: "Automatically run cleanup on save file".
 
-### Roslynator 2019
+### Roslynator
 
 A collection of 500+ analyzers, refactorings and fixes for C#.
 
@@ -93,14 +93,23 @@ Generates a unit test boilerplate from a given C# class, setting up mocks for al
 
 - https://github.com/madskristensen/BasicEssentials
     - Add New File
-    - Editor Enhancements
-    - EditorConfig Language Service
+    - Comment Remover
+    - Developer News
     - File Icons
+    - Font Sizer
     - Insert GUID
-    - Learn the Shortcut
     - Markdown Editor
+    - Output Enhancer
+    - Theme Switcher
+    - Tweaks
 
 - https://github.com/madskristensen/WebEssentials2019
+
+### Libman - Microsoft Library Manager
+
+Handle clientside packages in Visual Studio (similar to npm, webpack, yarn, bower)
+
+- <https://github.com/aspnet/LibraryManager>
 
 ### Code Coverage (TODO)
 
@@ -118,7 +127,7 @@ Reporting
 - https://marketplace.visualstudio.com/items?itemName=MadsKristensen.FileDiffer
 - https://github.com/danielpalme/ReportGenerator
 
-### Comparing Files
+### Comparing single files
 
 - https://www.meziantou.net/comparing-files-using-visual-studio.htm
 
