@@ -131,6 +131,13 @@ Reporting
 
 - https://www.meziantou.net/comparing-files-using-visual-studio.htm
 
+### Dependency Governance
+
+NsDepCop
+
+- http://www.plainionist.net/Dependency-Governance-DotNet/
+- https://github.com/realvizu/NsDepCop
+
 ## Solution Cleanup
 
 ### Reset all changes
