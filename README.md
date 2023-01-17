@@ -179,3 +179,11 @@ Get-ChildItem .\ -include packages,bin,obj,bld,Backup,_UpgradeReport_Files,Debug
 Get-ChildItem .\ -include packages,bin,obj,bld,Backup,_UpgradeReport_Files,Debug,Release,ipch,help,.vs -Recurse 
 
 ```
+
+## Use Visual Studio as `difftool` and `mergetool`
+
+- If you haven't, install `everything` in your windows machine (best search tool ever: <https://www.voidtools.com/>)
+- Search for `vsdiffmerge` to get its path
+- Found it here: `C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer\vsDiffMerge.exe`
+- Open git-extensions, open settings for `difftool` and `mergetool`
+- Select `vsdiffmerge` and use the `vsdiffmerge` path
