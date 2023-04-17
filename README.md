@@ -125,11 +125,11 @@ TODO: evaluate free tools:
 
 Reporting
 
-- https://marketplace.visualstudio.com/items?itemName=MadsKristensen.FileDiffer
 - https://github.com/danielpalme/ReportGenerator
 
 ### Comparing single files
 
+- https://marketplace.visualstudio.com/items?itemName=MadsKristensen.FileDiffer
 - https://www.meziantou.net/comparing-files-using-visual-studio.htm
 
 ### Dependency Governance
