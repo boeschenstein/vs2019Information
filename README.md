@@ -103,7 +103,8 @@ Generates a unit test boilerplate from a given C# class, setting up mocks for al
     - Theme Switcher
     - Tweaks
 
-- https://github.com/madskristensen/WebEssentials2019
+- VS 2019: https://github.com/madskristensen/WebEssentials2019
+- VS 2022: https://marketplace.visualstudio.com/items?itemName=MadsKristensen.TheEssentials2022
 
 ### Libman - Microsoft Library Manager
 
