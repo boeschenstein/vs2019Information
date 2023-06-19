@@ -20,6 +20,17 @@ dotnet_sort_system_directives_first = true
 dotnet_diagnostic.RCS1090.severity = none
 ```
 
+- Code Style Preferences: https://learn.microsoft.com/en-us/visualstudio/ide/code-styles-and-code-cleanup?view=vs-2022
+- Code Style Rules (full example): https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/code-style-rule-options
+
+### Good to know: how to apply all .editorconfig settings on save of file:
+
+Tools, Options, Text-Editor, Code-Cleanup:
+
+1. "Select Code Cleanup Profile on Save profile": select "Profile 1" 
+2. Enable "[x] run Code Cleanup Profile on Save"
+3. click "Configure Code Cleanup": Add Option "Fix all warnings and errors set in EditorConfig" to the top
+
 ## Source code of .NET Core
 
 <https://source.dot.net/>
