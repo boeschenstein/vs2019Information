@@ -191,6 +191,83 @@ Get-ChildItem .\ -include packages,bin,obj,bld,Backup,_UpgradeReport_Files,Debug
 Get-ChildItem .\ -include packages,bin,obj,bld,Backup,_UpgradeReport_Files,Debug,Release,ipch,help,.vs -Recurse 
 
 ```
+More secure version:
+
+```ps
+# $targetDirectory = "C:\Path\To\Root\Directory"
+$targetDirectory = "."
+
+# Function to check if "*.csproj" file is present in the folder
+function CheckFileType {
+    param (
+        [string]$type,
+        [string]$path
+    )
+
+    # Check if "*.csproj" file is present in the folder
+    if (Test-Path "$path\$type") {
+        return $true
+    }
+
+    return $false
+}
+
+# Recursive function to delete "bin" and "obj" folders
+function DeleteBinObjFolders {
+    param (
+        [string]$path
+    )
+
+    # Get "bin" and "obj" folders within the current directory
+    $binFolders = Get-ChildItem -Path $path -Filter "bin" -Directory -Recurse
+    $objFolders = Get-ChildItem -Path $path -Filter "obj" -Directory -Recurse
+    $pckFolders = Get-ChildItem -Path $path -Filter "packages" -Directory -Recurse
+    $vsFolders = Get-ChildItem -Path $path -Filter ".vs" -Directory -Recurse
+    $nodeFolders = Get-ChildItem -Path $path -Filter "node_modules" -Directory -Recurse
+    $distFolders = Get-ChildItem -Path $path -Filter "dist" -Directory -Recurse
+    $angularFolders = Get-ChildItem -Path $path -Filter ".angular" -Directory -Recurse
+    $nxFolders = Get-ChildItem -Path $path -Filter ".nx" -Directory -Recurse
+    $vscodeFolders = Get-ChildItem -Path $path -Filter ".vscode" -Directory -Recurse
+
+    # Delete "bin" and "obj" folders if "*.csproj" file is present above
+    if (CheckFileType -type "*.csproj" -path $path) {
+        $binFolders | Remove-Item -Recurse -Force
+        $objFolders | Remove-Item -Recurse -Force
+        $pckFolders | Remove-Item -Recurse -Force
+        $vsFolders | Remove-Item -Recurse -Force
+        Write-Host "Deleted 'bin', 'obj', 'packages', '.vs' folders in: $path near .csproj"
+    }
+    else {
+        # Write-Host "Skipping deletion as no '*.csproj' file found above: $path"
+    }
+
+    if (CheckFileType -type "*.sln" -path $path) {
+        $pckFolders | Remove-Item -Recurse -Force
+        $vsFolders | Remove-Item -Recurse -Force
+        Write-Host "Deleted 'package', '.vs' folders in: $path near .sln"
+    }
+    else {
+        # Write-Host "Skipping deletion as no '*.sln' file found above: $path"
+    }
+
+    if (CheckFileType -type "package.json" -path $path) {
+        $nodeFolders | Remove-Item -Recurse -Force
+        $distFolders | Remove-Item -Recurse -Force
+        $angularFolders | Remove-Item -Recurse -Force
+        $nxFolders | Remove-Item -Recurse -Force
+        $vscodeFolders | Remove-Item -Recurse -Force
+        Write-Host "Deleted 'node_modules', 'dist', '.angular', '.nx', '.vscode' folders in: $path near package.json"
+    }
+    else {
+        # Write-Host "Skipping deletion as no 'package.json' file found above: $path"
+    }
+}
+
+# Recursively delete "bin" and "obj" folders
+Get-ChildItem -Path $targetDirectory -Directory -Recurse | ForEach-Object {
+    DeleteBinObjFolders -path $_.FullName
+}
+```
 
 ## Use Visual Studio as `difftool` and `mergetool`
 
