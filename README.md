@@ -234,7 +234,7 @@ function DeleteBinObjFolders {
         $binFolders | Remove-Item -Recurse -Force
         $objFolders | Remove-Item -Recurse -Force
         $pckFolders | Remove-Item -Recurse -Force
-        $vsFolders | Remove-Item -Recurse -Force
+        # $vsFolders | Remove-Item -Recurse -Force
         Write-Host "Deleted 'bin', 'obj', 'packages', '.vs' folders in: $path near .csproj"
     }
     else {
@@ -255,7 +255,7 @@ function DeleteBinObjFolders {
         $distFolders | Remove-Item -Recurse -Force
         $angularFolders | Remove-Item -Recurse -Force
         $nxFolders | Remove-Item -Recurse -Force
-        $vscodeFolders | Remove-Item -Recurse -Force
+        # $vscodeFolders | Remove-Item -Recurse -Force
         Write-Host "Deleted 'node_modules', 'dist', '.angular', '.nx', '.vscode' folders in: $path near package.json"
     }
     else {
@@ -263,7 +263,7 @@ function DeleteBinObjFolders {
     }
 }
 
-# Recursively delete "bin" and "obj" folders
+# Recursively delete folders recursively
 Get-ChildItem -Path $targetDirectory -Directory -Recurse | ForEach-Object {
     DeleteBinObjFolders -path $_.FullName
 }
