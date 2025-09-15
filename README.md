@@ -192,6 +192,22 @@ Get-ChildItem .\ -include packages,bin,obj,bld,Backup,_UpgradeReport_Files,Debug
 
 ```
 
+## Certificate issue
+
+### Problem
+
+ASP.NET Apps do not run anymore, because certificate is not valid.
+Create new cert keep failing: "Failed trusting the certificate".
+
+### Solution
+
+Run certificate manager (certmgr.exe). 
+Delete all existing localhost certs in: "Personal/Certificates" and "Trusted Root Certification Authorities/Certificates".
+
+Create new cert:
+`dotnet dev-certs https -ep ./certificate.pfx -p MY_COOL_PASSWORD --trust`
+Import this new file in the certificate manager (certmgr.exe): right mouse click on "Trusted Root Certification Authorities/Certificates": All Tasks: Import: select the new `certificate.pfx` (maybe change filter to all files *.*)
+
 ## Use Visual Studio as `difftool` and `mergetool`
 
 - If you haven't, install `everything` in your windows machine (best search tool ever: <https://www.voidtools.com/>)
